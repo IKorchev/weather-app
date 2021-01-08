@@ -26,7 +26,7 @@ getWeatherBtn.addEventListener('click', async (e) => {
         app.classList.add('sun')
     }}
     catch (err) {
-        alert('Enter a valid location')
+        alert(err)
     }
     
    
