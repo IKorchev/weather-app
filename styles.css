@@ -1,16 +1,16 @@
 #city-label {
-    font-size: large;
+  font-size: large;
 }
 
 .main {
-    height:30rem;
-    max-width: 30rem;
+  height: 30rem;
+  max-width: 30rem;
 }
 
 .cold {
-    box-shadow: 5px 5px 100px rgb(17, 224, 252)!important;
+  box-shadow: 5px 5px 100px rgb(17, 224, 252) !important;
 }
 
 .sun {
-    box-shadow: 5px 5px 100px rgb(255, 238, 2)!important;
+  box-shadow: 5px 5px 100px rgb(255, 238, 2) !important;
 }
