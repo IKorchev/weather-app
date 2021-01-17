@@ -30,7 +30,7 @@ const clickHandler = async (e) => {
     weatherText.innerHTML = `
     <h1>${
       weather.name
-    }</h1> <img class="small" src="http://openweathermap.org/img/wn/${
+    }</h1> <img class="small" src="https://openweathermap.org/img/wn/${
       weather.weather[0].icon
     }@2x.png"> <h5>${description}</h5> <br></br>
     <h2>${weather.main.temp.toFixed(
