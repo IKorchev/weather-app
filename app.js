@@ -21,7 +21,7 @@ const clickHandler = async (e) => {
 
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=metric&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=metric&appid=${API_KEY}`
     )
     let weather = await response.json()
     console.log(weather)
