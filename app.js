@@ -1,5 +1,5 @@
 const city = document.querySelector(".city")
-const getWeatherBtn = document.querySelector(".getWeather")
+const getWeatherBtn = document.querySelector(".get-weather")
 const API_KEY = "4e500205a616505955675518272633a4"
 const weatherText = document.querySelector(".weather-text")
 const app = document.querySelector(".main")
@@ -19,6 +19,8 @@ const capitalise = (str) => {
 const clickHandler = async (e) => {
   e.preventDefault()
 
+  // Fetching data from API
+
   try {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=metric&appid=${API_KEY}`
@@ -27,17 +29,23 @@ const clickHandler = async (e) => {
     console.log(weather)
     city.value = ""
     let description = capitalise(weather.weather[0].description)
-    weatherText.innerHTML = `
+
+    // Template string ( Using Prettier to format and the formatting of template literals is terrible, not sure how to fix it without disabling which I don't wanna do! )
+
+    weatherText.innerHTML = `<div class="text-center">
     <h1>${
       weather.name
-    }</h1> <img class="small" src="https://openweathermap.org/img/wn/${
+    } </h1> <img class="small" src="https://openweathermap.org/img/wn/${
       weather.weather[0].icon
-    }@2x.png"> <h5>${description}</h5> <br></br>
+    }@2x.png"> 
+    <h5>${description}</h5>
     <h2>${weather.main.temp.toFixed(
       1
-    )}° feels like ${weather.main.feels_like.toFixed(1)}°</h2>
+    )}° feels like ${weather.main.feels_like.toFixed(1)}°</h2></div>
       `
-    console.log(await response)
+
+    // Conditions to change background
+
     if (weather.main.temp < 15 && body.classList.contains("sun")) {
       body.classList.replace("sun", "cold")
     } else if (weather.main.temp <= 15 && !body.classList.contains("sun")) {
