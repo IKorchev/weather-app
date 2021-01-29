@@ -9,13 +9,17 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 .main {
-  box-shadow: 0 0 20px black;
+  box-shadow: 0 0 10px rgb(205, 205, 205);
   border: none;
   height: 40rem;
   width: 40rem;
-  border-radius: 50%;
+  border-radius: 1%;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 h1 {
@@ -25,22 +29,6 @@ h1 {
 .city,
 .btn {
   border-radius: 15px;
-}
-
-.cold {
-  background: radial-gradient(
-    circle,
-    rgba(29, 199, 253, 1) 0%,
-    rgba(139, 145, 255, 1) 80%
-  ) !important;
-}
-
-.sun {
-  background: radial-gradient(
-    circle,
-    rgba(252, 228, 69, 1) 0%,
-    rgba(253, 29, 29, 1) 100%
-  ) !important;
 }
 
 .small {
@@ -54,18 +42,6 @@ h1 {
 
 @media only screen and (max-width: 780px) {
   .main {
-    width: 30rem;
-    height: 30rem;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
-  .small {
-    width: 60px;
-    height: 60px;
-  }
-
-  h2 {
-    font-size: 1.1rem;
+    width: 25rem;
   }
 }
